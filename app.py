@@ -2,8 +2,8 @@ from flask import Flask, request, app, render_template
 from flask_cors import CORS, cross_origin
 from flask import Response
 import pickle
-#import numpy as np
-#import pandas as pd
+import numpy as np
+import pandas as pd
 
 
 app =Flask(__name__)
