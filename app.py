@@ -2,13 +2,11 @@ from flask import Flask, request, app, render_template
 from flask_cors import CORS, cross_origin
 from flask import Response
 import pickle
-import numpy as np
-import pandas as pd
 
 
 app =Flask(__name__)
 
-scaler=pickle.load(open("Model/standardScaler.pkl", "rb"))
+scaler= pickle.load(open("Model/standardScaler.pkl", "rb"))
 model = pickle.load(open("Model/modelforprediction.pkl", "rb"))
 
 @app.route('/')
@@ -42,7 +40,6 @@ def predict_datapoint():
             result ='Non-Diabetic'
             return render_template('single2.html',result=result)
             
-        #return render_template('single_prediction.html',result=result)
 
     else:
         return render_template('home.html')
