@@ -1,4 +1,4 @@
-# Logistic_Regression_Project
+# Diabetes_Prediction_Project
 
 > Predict Diabetes using Machine Learning.
 
